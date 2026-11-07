@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Magesh S – One builder, three sides</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0810;--bg2:#14101c;--text:#f3eef7;--muted:#9a93a8;--line:#2a2335;--c1:#ff7a59;--c2:#b58cff;--card:#15111d;color-scheme:dark;
+--sans:"Manrope",system-ui,sans-serif;--cond:"Barlow Condensed","Arial Narrow",Impact,sans-serif;--serif:"Instrument Serif",Georgia,serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root[data-theme="light"]{--bg:#faf6f1;--bg2:#f1e9e0;--text:#1a1420;--muted:#6d6577;--line:#e2d8cc;--card:#fff;color-scheme:light}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 var(--sans);overflow-x:hidden;
+background-image:radial-gradient(60% 40% at 15% 0%,rgba(255,122,89,.18),transparent 70%),radial-gradient(50% 40% at 100% 30%,rgba(181,140,255,.16),transparent 70%)}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;backdrop-filter:blur(12px);background:color-mix(in srgb,var(--bg) 70%,transparent);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+.brand{font-family:var(--cond);font-weight:800;font-size:22px;letter-spacing:.04em}
+.nl{display:flex;gap:22px;font-size:13px;color:var(--muted);align-items:center}
+.nl a:hover{color:var(--text)}
+.tg{background:none;border:1px solid var(--line);color:var(--text);border-radius:99px;padding:4px 11px;cursor:pointer;font-size:12px}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;padding:70px 0 50px;min-height:78vh}
+.hi{font-family:var(--serif);font-style:italic;font-size:28px;color:var(--c1)}
+h1{font-family:var(--cond);font-weight:800;font-size:clamp(64px,13vw,150px);line-height:.88;margin:6px 0 14px;letter-spacing:-.01em;text-transform:uppercase}
+h1 span{background:linear-gradient(90deg,var(--c1),var(--c2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.roles{font-size:12px;letter-spacing:.2em;font-weight:700;color:var(--muted);text-transform:uppercase}
+.lead{color:var(--muted);max-width:460px;margin:18px 0 26px}
+.pill{display:inline-flex;gap:8px;align-items:center;background:linear-gradient(90deg,var(--c1),#ff9d7a);color:#1a0c08;font-weight:800;border-radius:99px;padding:12px 24px;font-size:14px}
+.ghost{margin-left:10px;border:1px solid var(--line);border-radius:99px;padding:11px 22px;font-size:14px;font-weight:700}
+.portrait{position:relative;aspect-ratio:4/5;border-radius:28px;background:linear-gradient(160deg,rgba(255,122,89,.35),rgba(181,140,255,.25)),var(--bg2);border:1px solid var(--line);display:grid;place-items:center;overflow:hidden}
+.portrait b{font-family:var(--cond);font-size:clamp(120px,22vw,240px);line-height:1;color:rgba(255,255,255,.12)}
+.portrait small{position:absolute;bottom:14px;left:16px;font-size:11px;letter-spacing:.2em;color:var(--muted)}
+.stats{position:absolute;right:16px;top:16px;display:grid;gap:10px;text-align:right}
+.stats div{font-family:var(--cond);font-weight:800;font-size:44px;line-height:1;color:var(--c1)}
+.stats span{display:block;font:700 10px var(--sans);letter-spacing:.15em;color:var(--muted);text-transform:uppercase}
+.mq{overflow:hidden;background:linear-gradient(90deg,var(--c1),var(--c2));color:#1a0c15;transform:rotate(-1deg);margin:10px -20px;border-block:1px solid rgba(0,0,0,.2)}
+.mq div{display:flex;gap:26px;white-space:nowrap;width:max-content;padding:12px 0;font-family:var(--cond);font-weight:800;font-size:26px;text-transform:uppercase;animation:m 28s linear infinite}
+@keyframes m{to{transform:translateX(-50%)}}
+section{padding:80px 0}
+.eye{font-size:12px;letter-spacing:.2em;color:var(--muted);text-transform:uppercase;font-weight:700}
+h2{font-family:var(--cond);font-weight:800;font-size:clamp(44px,8vw,88px);line-height:.95;margin:8px 0 22px;text-transform:uppercase}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.tab{background:none;color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:6px 16px;cursor:pointer;font:700 13px var(--sans)}
+.tab.on{background:linear-gradient(90deg,var(--c1),#ff9d7a);color:#1a0c08;border-color:transparent}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;transition:transform .25s,border-color .25s}
+.card:hover{transform:translateY(-4px);border-color:var(--c1)}
+.card[hidden]{display:none}
+.thumb{height:170px;display:grid;place-items:center;font-family:var(--cond);font-weight:800;font-size:34px;text-align:center;line-height:1;padding:10px;text-transform:uppercase}
+.t1{background:radial-gradient(circle at 30% 60%,#ff5b3a,#2a0d10 70%)}
+.t2{background:radial-gradient(circle at 70% 40%,#7c4dff,#120c26 70%)}
+.t3{background:radial-gradient(circle at 50% 50%,#2fb7a3,#08171a 70%)}
+.meta{padding:16px 18px}
+.meta .n{color:var(--c1);font-weight:800;font-size:13px}
+.meta h3{margin:2px 0 4px;font-size:16px}
+.meta p{margin:0;color:var(--muted);font-size:14px}
+.tools{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
+.tools span{border:1px solid var(--line);border-radius:12px;padding:10px 16px;font-weight:700;font-size:14px;background:var(--card)}
+.sides{display:grid;gap:0}
+.side{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center;padding:44px 0;border-top:1px solid var(--line)}
+.side .it{font-family:var(--serif);font-style:italic;font-size:clamp(28px,4vw,44px)}
+.side p{color:var(--muted);max-width:420px;margin:10px 0 0}
+.big{text-align:right;font-family:var(--cond);font-weight:800;text-transform:uppercase;line-height:.95}
+.big .o{font-size:clamp(56px,10vw,110px);color:transparent;-webkit-text-stroke:1.5px var(--c2)}
+.big .s{font-family:var(--serif);font-style:italic;text-transform:none;font-weight:400;font-size:clamp(26px,4vw,44px);color:var(--c1);display:block}
+.big .w{font-size:clamp(40px,7vw,76px)}
+.tl{border-left:1px solid var(--line);margin-top:20px}
+.j{position:relative;padding:0 0 30px 28px}
+.j:before{content:"";position:absolute;left:-6px;top:8px;width:11px;height:11px;border-radius:50%;background:var(--c1)}
+.j h3{margin:0;font-size:18px}.j small{color:var(--muted)}
+.j p{margin:6px 0 0;color:var(--muted);max-width:620px}
+.certs{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px}
+.cert{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+.cert b{font-family:var(--cond);font-size:30px;color:var(--c2)}
+.cert span{display:block;font-size:14px;color:var(--muted)}
+.contact{text-align:center}
+.contact .pill{margin:6px}
+footer{border-top:1px solid var(--line);padding:26px 0;text-align:center;color:var(--muted);font-size:13px}
+.cur{position:fixed;z-index:3;pointer-events:none;font-size:11px;font-weight:800;color:#111;animation:f 9s ease-in-out infinite}
+.amb{position:fixed;left:0;top:0;z-index:25;will-change:transform}
+.cur i{display:block;width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-bottom:16px solid currentColor;transform:rotate(-25deg)}
+.cur em{font-style:normal;padding:1px 7px;border-radius:99px;background:currentColor;margin-left:8px}
+.cur em{color:inherit}.cur span{color:#111}
+@keyframes f{50%{transform:translate(40px,-30px)}}
+.bp{opacity:0;transform:scale(.94) translateY(8px)}.bp.pop{opacity:1;transform:none;transition:opacity .45s,transform .55s cubic-bezier(.2,1.4,.4,1)}
+.sel{position:absolute;border:1px solid var(--k);background:color-mix(in srgb,var(--k) 9%,transparent);pointer-events:none;transition:opacity .5s}
+.sel i{position:absolute;width:7px;height:7px;background:#fff;border:1px solid var(--k)}
+.sel u{position:absolute;left:50%;top:100%;transform:translate(-50%,8px);background:var(--k);color:#fff;font:700 10px var(--sans);padding:2px 7px;border-radius:4px;white-space:nowrap;text-decoration:none}
+.cu{position:absolute;pointer-events:none;color:var(--k);transition:opacity .5s;white-space:nowrap}
+.cu svg{display:block}.cu b{display:inline-block;margin:-2px 0 0 12px;background:var(--k);color:#111;font:800 11px var(--sans);padding:2px 8px;border-radius:99px}
+@media (max-width:760px){.hero,.side{grid-template-columns:1fr}.big{text-align:left}.nl a:nth-child(n+3){display:none}}
+@media (prefers-reduced-motion:reduce){.mq div,.cur{animation:none}.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><a class="brand" href="#top">MAGESH.</a><div class="nl"><a href="#work">Work</a><a href="#about">About</a><a href="#journey">Journey</a><a href="#contact">Contact</a><button class="tg" id="tg">Theme</button></div></div></nav>
+
+
+<main id="top">
+<div class="wrap hero">
+<div>
+<div class="hi">Hello, I’m</div>
+<h1>Magesh<span>.</span></h1>
+<div class="roles">D365 Developer · Power Platform · Azure Integrations</div>
+<p class="lead">I build enterprise CRM solutions on Dynamics 365 and the Power Platform: plugins, portals, flows and the cloud glue that connects them. Based in Chennai.</p>
+<a class="pill" href="#work">See my work →</a><a class="ghost" href="#contact">Say hello</a>
+</div>
+<div class="portrait"><b>MS</b><div class="stats"><div>1.8<span>Years building</span></div><div>3<span>Certifications</span></div><div>1<span>Best paper</span></div></div><small>ONE BUILDER / THREE SIDES</small></div>
+</div>
+
+<div class="mq"><div><span>Dynamics 365 +</span><span>Power Apps +</span><span>Power Pages +</span><span>Power Automate +</span><span>Plugins +</span><span>Azure Functions +</span><span>JavaScript +</span><span>Dynamics 365 +</span><span>Power Apps +</span><span>Power Pages +</span><span>Power Automate +</span><span>Plugins +</span><span>Azure Functions +</span><span>JavaScript +</span></div></div>
+
+<div class="wrap">
+<section id="work" class="rv">
+<div class="eye">01 / Selected work</div>
+<h2>Work that ships.</h2>
+<div class="tabs"><button class="tab on" data-f="all">All</button><button class="tab" data-f="pro">Professional</button><button class="tab" data-f="acad">Academic</button></div>
+<div class="grid">
+<a class="card" data-c="pro" href="#journey"><div class="thumb t1">American Airlines<br>D365</div><div class="meta"><div class="n">01 · Cognizant · 2025–</div><h3>Dynamics 365 CRM Platform</h3><p>Plugins, Azure Functions and a Power Pages portal for a global airline client.</p></div></a>
+<div class="card" data-c="acad"><div class="thumb t2">Gas Alert<br>System</div><div class="meta"><div class="n">02 · 2024 · Best Paper, RTACT</div><h3>Domestic Gas Alert System</h3><p>Gas-leak detection and alerting, recognised with Best Paper at SIMATS Engineering College.</p></div></div>
+<div class="card" data-c="acad"><div class="thumb t3">Smart<br>Goggles</div><div class="meta"><div class="n">03 · Academic</div><h3>Smart Goggles</h3><p>Engineering degree project.</p></div></div>
+</div>
+<div class="eye" style="margin-top:44px">The tools behind the work</div>
+<div class="tools"><span>Dynamics 365 CE</span><span>Power Apps</span><span>Power Pages</span><span>Power Automate</span><span>Azure Functions</span><span>C# Plugins</span><span>JavaScript</span></div>
+</section>
+
+<section id="about" class="rv">
+<div class="eye">02 / One builder, three sides</div>
+<h2>Three sides.</h2>
+<div class="sides">
+<div class="side"><div><div class="it">CRM developer by trade,</div><p>Synchronous and asynchronous plugins, JavaScript form logic and managed or unmanaged solutions on D365 Customer Engagement.</p></div><div class="big"><span class="o">Plugins</span><span class="s">& solutions,</span><span class="w">on D365</span></div></div>
+<div class="side"><div><div class="it">Low-code when it fits,</div><p>Canvas and model-driven apps, Power Automate flows and Power Pages portals that business users actually use.</p></div><div class="big"><span class="o">Flows</span><span class="s">& portals,</span><span class="w">Power Platform</span></div></div>
+<div class="side"><div><div class="it">Cloud glue in between.</div><p>HTTP-triggered Azure Functions called from the Power Pages portal through APIs to connect it all.</p></div><div class="big"><span class="o">Azure</span><span class="s">& APIs,</span><span class="w">Functions</span></div></div>
+</div></section>
+
+<section id="journey" class="rv">
+<div class="eye">03 / Journey</div>
+<h2>The road so far.</h2>
+<div class="tl">
+<div class="j"><h3>BizApps Developer</h3><small>Cognizant · Aug 2026 – Present</small><p>Building D365 customizations, plugins and Azure integrations on the American Airlines project.</p></div>
+<div class="j"><h3>Programmer Analyst Trainee</h3><small>Cognizant · Aug 2025 – Aug 2026</small><p>Power Platform and D365 delivery, including Power Pages portals backed by Azure Functions.</p></div>
+<div class="j"><h3>Intern</h3><small>Cognizant · Mar – Jun 2025</small><p>Trained on D365 and Power Platform; earned PL-200 and MB-910.</p></div>
+<div class="j"><h3>B.E. Computer Science and Engineering</h3><small>Velammal Engineering College · 2025</small></div>
+</div>
+<div class="certs">
+<div class="cert"><b>PL-200</b><span>Power Platform Functional Consultant<br>Jun 2025 · renewed Jun 2026</span></div>
+<div class="cert"><b>MB-910</b><span>Dynamics 365 Fundamentals (CRM)<br>Jun 2025</span></div>
+<div class="cert"><b>AB-900</b><span>Copilot &amp; Agent Administration Fundamentals<br>Apr 2026</span></div>
+</div>
+<p><a class="ghost" style="margin:20px 0 0;display:inline-block" href="https://learn.microsoft.com/en-us/users/mageshs-3779/credentials/certification/" target="_blank" rel="noopener">Verify on Microsoft Learn ↗</a></p>
+</section>
+
+<section id="contact" class="contact rv">
+    <div class="eye">04 / Contact</div>
+    <h2>Let’s build<br>something.</h2>
+    <p style="color:var(--muted)">Open to Power Platform and D365 CRM developer roles.</p>
+    <a class="pill" href="https://mail.google.com/mail/?view=cm&fs=1&to=mages052004@gmail.com&su=Hello%20Magesh">Email me</a><a class="pill" href="https://www.linkedin.com/in/magesh0503" target="_blank" rel="noopener">LinkedIn</a><a class="pill" href="https://github.com/Magesh534S" target="_blank" rel="noopener">GitHub</a>
+    </section>
+    </div>
+</main>
+<footer>© 2026 Magesh S · Chennai, India</footer>
+
+<script>
+(function(){
+var r=document.documentElement;
+try{var s=localStorage.getItem("th");if(s)r.setAttribute("data-theme",s)}catch(e){}
+document.getElementById("tg").onclick=function(){var n=r.getAttribute("data-theme")==="light"?"dark":"light";r.setAttribute("data-theme",n);try{localStorage.setItem("th",n)}catch(e){}};
+document.querySelectorAll(".tab").forEach(function(b){b.onclick=function(){
+document.querySelectorAll(".tab").forEach(function(x){x.classList.remove("on")});b.classList.add("on");
+document.querySelectorAll(".card").forEach(function(c){c.hidden=b.dataset.f!=="all"&&c.dataset.c!==b.dataset.f})}});
+var reduce=matchMedia("(prefers-reduced-motion:reduce)").matches;
+var SVG='<svg width="16" height="16" viewBox="0 0 16 16"><path d="M1 1l13 5-5.5 2L6 14z" fill="currentColor" stroke="#fff" stroke-width="1"/></svg>';
+var cols=[["#3b9eff","magesh"],["#ff5b5b","plugins"],["#ffd24d","flows"],["#ff8ad8","azure"],["#7fe3ff","power"]];
+var layer=document.createElement("div");layer.style.cssText="position:absolute;left:0;top:0;width:100%;height:0;overflow:visible;pointer-events:none;z-index:30";document.body.style.position="relative";document.body.appendChild(layer);
+var els=[].slice.call(document.querySelectorAll(".hi,h1,.roles,.lead,.hero .pill,.hero .ghost,.portrait,.eye,h2,.tabs,.card,.tools span,.side>div,.j,.cert,.contact .pill,.contact p"));
+els.forEach(function(e){e._st=0;e._tok=0;e._tmp=[];if(!reduce)e.classList.add("bp")});
+var n=0,last=0,dir=1,ly=scrollY;
+addEventListener("scroll",function(){var y=scrollY;if(y!==ly){dir=y>ly?1:-1;ly=y}},{passive:true});
+function ease(t){return 1-Math.pow(1-t,3)}
+function reset(el){el._tok++;el._tmp.forEach(function(x){x.remove()});el._tmp=[];el.classList.remove("pop");el.classList.add("bp");el._st=0}
+function build(el,delay){
+var tok=++el._tok;el._st=1;
+setTimeout(function(){
+if(tok!==el._tok)return;
+var b=el.getBoundingClientRect(),x=b.left+scrollX,y=b.top+scrollY,w=b.width,h=b.height,c=cols[n++%cols.length];
+var s=document.createElement("div");s.className="sel";s.style.setProperty("--k",c[0]);s.style.cssText+=";left:"+x+"px;top:"+y+"px;width:0;height:0";
+s.innerHTML='<i style="left:-4px;top:-4px"></i><i style="right:-4px;top:-4px"></i><i style="left:-4px;bottom:-4px"></i><i style="right:-4px;bottom:-4px"></i><u></u>';
+var cu=document.createElement("div");cu.className="cu";cu.style.setProperty("--k",c[0]);
+cu.innerHTML=SVG+'<b>'+c[1]+'</b>';
+layer.appendChild(s);layer.appendChild(cu);el._tmp=[s,cu];
+var u=s.querySelector("u"),fx=x+(Math.random()<.5?-1:1)*(80+Math.random()*120),fy=dir>0?y-40-Math.random()*60:y+h+40+Math.random()*60,t0=performance.now(),T1=380,T2=700+Math.min(500,w/3);
+function finish(){el._st=2;el.classList.add("pop");
+setTimeout(function(){if(tok===el._tok)el.classList.remove("bp","pop")},700);
+setTimeout(function(){s.style.opacity=0},350);setTimeout(function(){s.remove()},900);
+cu.style.transition="left 1.6s ease,top 1.6s ease,opacity .5s";
+cu.style.left=(x+w+60+Math.random()*80)+"px";cu.style.top=(y+h+30*dir+Math.random()*60*dir)+"px";
+setTimeout(function(){cu.style.opacity=0},1100);setTimeout(function(){cu.remove()},1900)}
+(function step(now){if(tok!==el._tok)return;var t=now-t0;
+if(t<T1){var k=ease(t/T1);cu.style.left=(fx+(x-fx)*k)+"px";cu.style.top=(fy+(y-fy)*k)+"px"}
+else if(t<T1+T2){var k2=ease((t-T1)/T2),cw=w*k2,ch=h*k2;s.style.width=cw+"px";s.style.height=ch+"px";cu.style.left=(x+cw)+"px";cu.style.top=(y+ch)+"px";u.textContent=Math.round(cw)+" \u00d7 "+Math.round(ch)}
+else{finish();return}
+requestAnimationFrame(step)})(t0);
+},delay)}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){var el=e.target;if(reduce)return;
+if(e.intersectionRatio>=.15&&el._st===0){var now=performance.now();last=Math.max(last+170,now);build(el,last-now)}
+else if(!e.isIntersecting&&el._st!==0){reset(el)}})},{threshold:[0,.15]});
+els.forEach(function(el){io.observe(el)});
+if(!reduce){
+var amb=[["#ffd24d","pm"],["#7fe3ff","dev"],["#ff8ad8","design"]].map(function(c,i){
+var d=document.createElement("div");d.className="cu amb";d.style.setProperty("--k",c[0]);d.innerHTML=SVG+'<b>'+c[1]+'</b>';document.body.appendChild(d);
+return{d:d,x:innerWidth*(.2+.3*i),y:innerHeight*.6,el:null,fx:.5,fy:.5,t:0}});
+function pick(a){var vis=els.filter(function(e){var b=e.getBoundingClientRect();return e._st===2&&b.width>20&&b.height>10&&b.bottom>80&&b.top<innerHeight-20});
+a.el=vis.length?vis[Math.floor(Math.random()*vis.length)]:null;a.fx=.15+Math.random()*.7;a.fy=.15+Math.random()*.7;a.t=performance.now()+1400+Math.random()*1800}
+amb.forEach(function(a,i){setTimeout(function(){pick(a)},i*600)});
+(function loop(now){amb.forEach(function(a){
+if(now>a.t||(a.el&&!document.contains(a.el)))pick(a);
+if(a.el){var b=a.el.getBoundingClientRect();
+if(b.bottom<70||b.top>innerHeight-10||a.el._st!==2){pick(a)}
+else{a.x+=(b.left+b.width*a.fx-a.x)*.07;a.y+=(b.top+b.height*a.fy-a.y)*.07}}
+a.d.style.transform="translate("+a.x+"px,"+a.y+"px)"});
+requestAnimationFrame(loop)})(performance.now());
+}
+})();
+</script>
+</body>
+</html>
